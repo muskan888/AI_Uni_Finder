@@ -1,0 +1,13 @@
+
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/ai-services?service=$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "env": {
+    "VITE_OPENAI_API_KEY": "@openai-api-key"
+  }
+}
